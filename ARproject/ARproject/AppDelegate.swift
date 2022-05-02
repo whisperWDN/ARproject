@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ARproject
 //
-//  Created by admin on 2022/5/1.
+//  Created by whisper on 2022/5/1.
 //
 
 import UIKit

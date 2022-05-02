@@ -2,35 +2,91 @@
 //  ContentView.swift
 //  ARproject
 //
-//  Created by admin on 2022/5/1.
+//  Created by whisper on 2022/5/1.
 //
 
 import SwiftUI
 import RealityKit
+import ARKit
 
 struct ContentView : View {
+    @StateObject var arViewModel = ARViewModel()
+    @State var addCube = false
+    @State var intensity = CGFloat(0.0)
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        ZStack(alignment: .bottom){
+            ARViewContainer(addCube: $addCube, intensity: $intensity).gesture(TapGesture().onEnded(){
+                
+            })
+            
+            Button(action: {
+                addCube = true
+            }, label: {
+                Text("放置一个立方体")
+            })
+                .buttonStyle(.bordered)
+                .padding()
+            
+            Text("Intensity: \(intensity)")
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .padding()
+        }
+        .environmentObject(arViewModel)
     }
 }
 
 struct ARViewContainer: UIViewRepresentable {
     
+    @EnvironmentObject var arViewModel :ARViewModel
+    @Binding var addCube: Bool
+    @Binding var intensity: CGFloat
+    
     func makeUIView(context: Context) -> ARView {
-        
-        let arView = ARView(frame: .zero)
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
-        
-        return arView
-        
+        arViewModel.arView.enableTapGesture()
+        return arViewModel.arView
     }
     
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    func updateUIView(_ uiView: ARView, context: Context) {
+        if addCube{
+            print("add Cube")
+            let boxMesh = MeshResource.generateBox(size: 1)
+            let material = SimpleMaterial(color: .blue, isMetallic: false)
+            let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
+            let anchorEntity = AnchorEntity()
+
+            anchorEntity.addChild(modelEntity)
+            arViewModel.arView.scene.addAnchor(anchorEntity)
+            DispatchQueue.main.async {
+                addCube = false
+            }
+        }
+    }
+    
+    
+    
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject, ARSessionDelegate{
+        var parent: ARViewContainer
+
+        init(_ arViewContainer: ARViewContainer){
+            parent = arViewContainer
+            super.init()
+        }
+
+        func session(_ session: ARSession, didUpdate frame: ARFrame) {
+            if let intensity = frame.lightEstimate?.ambientIntensity{
+                parent.intensity = intensity
+            }
+
+        }
+
+
+
+    }
     
 }
 

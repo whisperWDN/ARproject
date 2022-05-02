@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840B8EA828201E9600C631E2 /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B8EA728201E9600C631E2 /* ARViewModel.swift */; };
 		8439C69C281EC640009EB9A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69B281EC640009EB9A5 /* AppDelegate.swift */; };
 		8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69D281EC640009EB9A5 /* ContentView.swift */; };
 		8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69F281EC640009EB9A5 /* Experience.rcproject */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840B8EA728201E9600C631E2 /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
 		8439C698281EC640009EB9A5 /* ARproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8439C69B281EC640009EB9A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8439C69D281EC640009EB9A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		8439C69A281EC640009EB9A5 /* ARproject */ = {
 			isa = PBXGroup;
 			children = (
+				840B8EA728201E9600C631E2 /* ARViewModel.swift */,
 				8439C69B281EC640009EB9A5 /* AppDelegate.swift */,
 				8439C69D281EC640009EB9A5 /* ContentView.swift */,
 				8439C69F281EC640009EB9A5 /* Experience.rcproject */,
@@ -143,6 +146,7 @@
 				8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */,
 				8439C69C281EC640009EB9A5 /* AppDelegate.swift in Sources */,
 				8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */,
+				840B8EA828201E9600C631E2 /* ARViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
