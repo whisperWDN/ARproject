@@ -49,16 +49,39 @@ struct ARViewContainer: UIViewRepresentable {
     func updateUIView(_ uiView: ARView, context: Context) {
         if addCube{
             print("add Cube")
-            let boxMesh = MeshResource.generateBox(size: 1)
-            let material = SimpleMaterial(color: .blue, isMetallic: false)
-            let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
-            let anchorEntity = AnchorEntity()
+//            let boxMesh = MeshResource.generateBox(size: 1)
+//            let material = SimpleMaterial(color: .blue, isMetallic: false)
+//            let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
+//            let anchorEntity = AnchorEntity()
+//
+//            anchorEntity.addChild(modelEntity)
+//            arViewModel.arView.scene.addAnchor(anchorEntity)
 
-            anchorEntity.addChild(modelEntity)
-            arViewModel.arView.scene.addAnchor(anchorEntity)
+            do{
+                let cup = try ModelEntity.load(named: "cup_saucer_set");
+                cup.position.x = -1.0
+
+                let anchorEntity = AnchorEntity()
+                
+                anchorEntity.addChild(cup)
+                arViewModel.arView.scene.addAnchor(anchorEntity)
+            }catch{
+                
+            }
             DispatchQueue.main.async {
                 addCube = false
             }
+
+//            let cowAnimationResource = cow.availableAnimations[0]
+//            let horseAnimationResource = horse.availableAnimations[0]
+//
+//            cow.playAnimation(cowAnimationResource.repeat(duration: .infinity),
+//                                                transitionDuration: 1.25,
+//                                                      startsPaused: false)
+//
+//            horse.playAnimation(horseAnimationResource.repeat(duration: .infinity),
+//                                                    transitionDuration: 0.75,
+//                                                          startsPaused: false)
         }
     }
     
