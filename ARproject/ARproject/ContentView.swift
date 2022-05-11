@@ -59,14 +59,13 @@ struct ARViewContainer: UIViewRepresentable {
 
             do{
                 let cup = try ModelEntity.load(named: "cup_saucer_set");
-                cup.position.x = -1.0
 
                 let anchorEntity = AnchorEntity()
                 
                 anchorEntity.addChild(cup)
                 arViewModel.arView.scene.addAnchor(anchorEntity)
             }catch{
-                
+                print("找不到文件")
             }
             DispatchQueue.main.async {
                 addCube = false
