@@ -53,24 +53,18 @@ struct ARViewContainer: UIViewRepresentable {
 //            let material = SimpleMaterial(color: .blue, isMetallic: false)
 //            let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
 //            let anchorEntity = AnchorEntity()
-//
 //            anchorEntity.addChild(modelEntity)
 //            arViewModel.arView.scene.addAnchor(anchorEntity)
-
             do{
                 let cup = try ModelEntity.load(named: "cup_saucer_set");
-
                 let anchorEntity = AnchorEntity()
-                
                 anchorEntity.addChild(cup)
                 arViewModel.arView.scene.addAnchor(anchorEntity)
             }catch{
-                print("找不到文件")
             }
             DispatchQueue.main.async {
                 addCube = false
             }
-
 //            let cowAnimationResource = cow.availableAnimations[0]
 //            let horseAnimationResource = horse.availableAnimations[0]
 //
