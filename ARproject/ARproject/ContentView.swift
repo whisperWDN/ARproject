@@ -12,17 +12,26 @@ import ARKit
 struct ContentView : View {
     @StateObject var arViewModel = ARViewModel()
     @State var addCube = false
+    @State var addCup = false
     @State var intensity = CGFloat(0.0)
     var body: some View {
         ZStack(alignment: .bottom){
-            ARViewContainer(addCube: $addCube, intensity: $intensity).gesture(TapGesture().onEnded(){
+            ARViewContainer(addCube: $addCube, addCup:$addCup,intensity: $intensity).gesture(TapGesture().onEnded(){
                 
             })
             
+//            Button(action: {
+//                addCube = true
+//            }, label: {
+//                Text("放置一个立方体")
+//            })
+//                .buttonStyle(.bordered)
+//                .padding()
+            
             Button(action: {
-                addCube = true
+                addCup = true
             }, label: {
-                Text("放置一个立方体")
+                Text("放置一个杯子")
             })
                 .buttonStyle(.bordered)
                 .padding()
@@ -39,6 +48,7 @@ struct ARViewContainer: UIViewRepresentable {
     
     @EnvironmentObject var arViewModel :ARViewModel
     @Binding var addCube: Bool
+    @Binding var addCup: Bool
     @Binding var intensity: CGFloat
     
     func makeUIView(context: Context) -> ARView {
@@ -49,22 +59,57 @@ struct ARViewContainer: UIViewRepresentable {
     func updateUIView(_ uiView: ARView, context: Context) {
         if addCube{
             print("add Cube")
-//            let boxMesh = MeshResource.generateBox(size: 1)
-//            let material = SimpleMaterial(color: .blue, isMetallic: false)
-//            let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
-//            let anchorEntity = AnchorEntity()
-//            anchorEntity.addChild(modelEntity)
-//            arViewModel.arView.scene.addAnchor(anchorEntity)
-            do{
-                let cup = try ModelEntity.load(named: "cup_saucer_set");
-                let anchorEntity = AnchorEntity()
-                anchorEntity.addChild(cup)
-                arViewModel.arView.scene.addAnchor(anchorEntity)
-            }catch{
-            }
+            let boxMesh = MeshResource.generateBox(size: 0.1)
+            let material = SimpleMaterial(color: .blue, isMetallic: false)
+            let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
+            modelEntity.generateCollisionShapes(recursive: true)
+            arViewModel.arView.installGestures([.translation],for: modelEntity)
+            let anchorEntity = AnchorEntity(plane: .horizontal,classification: .table)
+            anchorEntity.addChild(modelEntity)
+            arViewModel.arView.scene.addAnchor(anchorEntity)
+
             DispatchQueue.main.async {
                 addCube = false
             }
+
+        }
+        if addCup{
+            self.placeCup()
+        }
+    }
+    
+    
+    func placeCup(){
+        print("add Cup")
+
+        do{
+            let cup = try ModelEntity.load(named: "cup_saucer_set");
+//            let modelEntity = ModelEntity(
+//            modelEntity.addChild(cup)
+            let anchorEntity = AnchorEntity()
+//            modelEntity.generateCollisionShapes(recursive: true)
+//            arViewModel.arView.installGestures([.translation],for:modelEntity)
+//            anchorEntity.addChild(modelEntity)
+            anchorEntity.addChild(cup)
+            arViewModel.arView.scene.addAnchor(anchorEntity)
+        }catch{
+            
+        }
+
+
+
+//            do{
+//
+//                cup.generateCollisionShapes(recursive: true)
+//                arViewModel.arView.installGestures([.translation],for: cup as! HasCollision)
+//                let tableAnchor = AnchorEntity()
+//                tableAnchor.addChild(cup)
+//                arViewModel.arView.scene.addAnchor(tableAnchor)
+//            }catch{
+//            }
+        DispatchQueue.main.async {
+            addCube = false
+        }
 //            let cowAnimationResource = cow.availableAnimations[0]
 //            let horseAnimationResource = horse.availableAnimations[0]
 //
@@ -75,11 +120,7 @@ struct ARViewContainer: UIViewRepresentable {
 //            horse.playAnimation(horseAnimationResource.repeat(duration: .infinity),
 //                                                    transitionDuration: 0.75,
 //                                                          startsPaused: false)
-        }
     }
-    
-    
-    
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)

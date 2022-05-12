@@ -13,7 +13,6 @@
 		8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69D281EC640009EB9A5 /* ContentView.swift */; };
 		8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69F281EC640009EB9A5 /* Experience.rcproject */; };
 		8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */; };
-		84AF5E3A28256E7A00126A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF5E3928256E7A00126A51 /* ViewController.swift */; };
 		84AF6F54282AC50D0075D0B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AF6F53282AC50D0075D0B4 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +24,6 @@
 		8439C69D281EC640009EB9A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8439C69F281EC640009EB9A5 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		84AF5E3928256E7A00126A51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84AF6F53282AC50D0075D0B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +57,6 @@
 		8439C69A281EC640009EB9A5 /* ARproject */ = {
 			isa = PBXGroup;
 			children = (
-				84AF5E3928256E7A00126A51 /* ViewController.swift */,
 				840B8EA728201E9600C631E2 /* ARViewModel.swift */,
 				8439C69B281EC640009EB9A5 /* AppDelegate.swift */,
 				8439C69D281EC640009EB9A5 /* ContentView.swift */,
@@ -150,7 +147,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84AF5E3A28256E7A00126A51 /* ViewController.swift in Sources */,
 				8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */,
 				8439C69C281EC640009EB9A5 /* AppDelegate.swift in Sources */,
 				8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */,
