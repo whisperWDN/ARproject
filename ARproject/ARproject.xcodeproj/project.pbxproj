@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84075E9D282AC07C00BC2E92 /* cup_saucer_set.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 84075E9C282AC07C00BC2E92 /* cup_saucer_set.usdz */; };
 		840B8EA828201E9600C631E2 /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B8EA728201E9600C631E2 /* ARViewModel.swift */; };
+		8434F07F282EA3D600EC990C /* cup_saucer_set.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */; };
 		8439C69C281EC640009EB9A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69B281EC640009EB9A5 /* AppDelegate.swift */; };
 		8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69D281EC640009EB9A5 /* ContentView.swift */; };
 		8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69F281EC640009EB9A5 /* Experience.rcproject */; };
@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		84075E9C282AC07C00BC2E92 /* cup_saucer_set.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cup_saucer_set.usdz; sourceTree = "<group>"; };
 		840B8EA728201E9600C631E2 /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
+		8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = cup_saucer_set.usdz; path = ../../../../Downloads/cup_saucer_set.usdz; sourceTree = "<group>"; };
 		8439C698281EC640009EB9A5 /* ARproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8439C69B281EC640009EB9A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8439C69D281EC640009EB9A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 				8439C69B281EC640009EB9A5 /* AppDelegate.swift */,
 				8439C69D281EC640009EB9A5 /* ContentView.swift */,
 				8439C69F281EC640009EB9A5 /* Experience.rcproject */,
-				84075E9C282AC07C00BC2E92 /* cup_saucer_set.usdz */,
+				8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */,
 				84AF6F53282AC50D0075D0B4 /* Assets.xcassets */,
 				8439C6A3281EC643009EB9A5 /* Preview Content */,
 			);
@@ -134,9 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8434F07F282EA3D600EC990C /* cup_saucer_set.usdz in Resources */,
 				8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */,
 				84AF6F54282AC50D0075D0B4 /* Assets.xcassets in Resources */,
-				84075E9D282AC07C00BC2E92 /* cup_saucer_set.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

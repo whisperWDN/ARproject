@@ -84,12 +84,12 @@ struct ARViewContainer: UIViewRepresentable {
 
         do{
             let cup = try ModelEntity.load(named: "cup_saucer_set");
-//            let modelEntity = ModelEntity(
-//            modelEntity.addChild(cup)
+            let modelEntity = ModelEntity()
+            modelEntity.addChild(cup)
             let anchorEntity = AnchorEntity()
-//            modelEntity.generateCollisionShapes(recursive: true)
-//            arViewModel.arView.installGestures([.translation],for:modelEntity)
-//            anchorEntity.addChild(modelEntity)
+            modelEntity.generateCollisionShapes(recursive: true)
+            arViewModel.arView.installGestures([.translation],for:modelEntity)
+            anchorEntity.addChild(modelEntity)
             anchorEntity.addChild(cup)
             arViewModel.arView.scene.addAnchor(anchorEntity)
         }catch{
