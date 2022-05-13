@@ -58,57 +58,47 @@ struct ARViewContainer: UIViewRepresentable {
     
     func updateUIView(_ uiView: ARView, context: Context) {
         if addCube{
-            print("add Cube")
-            let boxMesh = MeshResource.generateBox(size: 0.1)
-            let material = SimpleMaterial(color: .blue, isMetallic: false)
-            let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
-            modelEntity.generateCollisionShapes(recursive: true)
-            arViewModel.arView.installGestures([.translation],for: modelEntity)
-            let anchorEntity = AnchorEntity(plane: .horizontal,classification: .table)
-            anchorEntity.addChild(modelEntity)
-            arViewModel.arView.scene.addAnchor(anchorEntity)
-
-            DispatchQueue.main.async {
-                addCube = false
-            }
-
+            self.placeCube()
         }
         if addCup{
             self.placeCup()
         }
     }
     
-    
+    func placeCube(){
+        print("add Cube")
+        let boxMesh = MeshResource.generateBox(size: 0.1)
+        let material = SimpleMaterial(color: .blue, isMetallic: false)
+        let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
+        modelEntity.generateCollisionShapes(recursive: true)
+        arViewModel.arView.installGestures([.translation],for: modelEntity)
+        let anchorEntity = AnchorEntity(plane: .horizontal,classification: .table)
+        anchorEntity.addChild(modelEntity)
+        arViewModel.arView.scene.addAnchor(anchorEntity)
+
+        DispatchQueue.main.async {
+            addCube = false
+        }
+    }
     func placeCup(){
         print("add Cup")
 
         do{
-            let cup = try ModelEntity.load(named: "cup_saucer_set");
+            let cup = try Entity.load(named: "cup_saucer_set");
             let modelEntity = ModelEntity()
-            modelEntity.addChild(cup)
-            let anchorEntity = AnchorEntity()
-            modelEntity.generateCollisionShapes(recursive: true)
+            cup.generateCollisionShapes(recursive: true)
             arViewModel.arView.installGestures([.translation],for:modelEntity)
+            modelEntity.addChild(cup)
+            let anchorEntity = AnchorEntity(plane: .horizontal,classification: .table)
             anchorEntity.addChild(modelEntity)
-            anchorEntity.addChild(cup)
             arViewModel.arView.scene.addAnchor(anchorEntity)
         }catch{
             
         }
 
 
-
-//            do{
-//
-//                cup.generateCollisionShapes(recursive: true)
-//                arViewModel.arView.installGestures([.translation],for: cup as! HasCollision)
-//                let tableAnchor = AnchorEntity()
-//                tableAnchor.addChild(cup)
-//                arViewModel.arView.scene.addAnchor(tableAnchor)
-//            }catch{
-//            }
         DispatchQueue.main.async {
-            addCube = false
+            addCup = false
         }
 //            let cowAnimationResource = cow.availableAnimations[0]
 //            let horseAnimationResource = horse.availableAnimations[0]

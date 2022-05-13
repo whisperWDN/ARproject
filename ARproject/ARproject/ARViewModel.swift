@@ -14,6 +14,7 @@ class ARViewModel: ObservableObject{
     init(){
         arView = ARView()
         arView.setupForARWorldConfiguration()
+        arView.addCoaching()
 #if DEBUG
 //        arView.debugOptions = [.showAnchorOrigins, .showAnchorGeometry]
 #endif
@@ -23,12 +24,11 @@ class ARViewModel: ObservableObject{
 extension ARView:ARCoachingOverlayViewDelegate{
     func setupForARWorldConfiguration(){
         let configuration = ARWorldTrackingConfiguration()
-        configuration.isAutoFocusEnabled = false
+//        configuration.isAutoFocusEnabled = false
         configuration.planeDetection = [.horizontal, .vertical]
         configuration.environmentTexturing = .automatic
         configuration.isLightEstimationEnabled = true
 
-        
         if(ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentationWithDepth)){
             configuration.frameSemantics.insert(.personSegmentationWithDepth)
         }
