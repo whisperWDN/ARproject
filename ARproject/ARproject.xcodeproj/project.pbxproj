@@ -25,6 +25,7 @@
 		8439C69F281EC640009EB9A5 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84AF6F53282AC50D0075D0B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84B9C364282FE44800BA01D9 /* cup_saucer_set.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cup_saucer_set.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +58,10 @@
 		8439C69A281EC640009EB9A5 /* ARproject */ = {
 			isa = PBXGroup;
 			children = (
-				840B8EA728201E9600C631E2 /* ARViewModel.swift */,
-				8439C69B281EC640009EB9A5 /* AppDelegate.swift */,
-				8439C69D281EC640009EB9A5 /* ContentView.swift */,
+				84B9C363282FE44000BA01D9 /* Data */,
+				84B9C362282FE43700BA01D9 /* Model */,
+				84B9C361282FE42D00BA01D9 /* View */,
+				84B9C360282FE42800BA01D9 /* App */,
 				8439C69F281EC640009EB9A5 /* Experience.rcproject */,
 				8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */,
 				84AF6F53282AC50D0075D0B4 /* Assets.xcassets */,
@@ -74,6 +76,38 @@
 				8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84B9C360282FE42800BA01D9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8439C69D281EC640009EB9A5 /* ContentView.swift */,
+				8439C69B281EC640009EB9A5 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		84B9C361282FE42D00BA01D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84B9C362282FE43700BA01D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				840B8EA728201E9600C631E2 /* ARViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84B9C363282FE44000BA01D9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84B9C364282FE44800BA01D9 /* cup_saucer_set.usdz */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
