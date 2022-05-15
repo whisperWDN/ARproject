@@ -28,15 +28,15 @@ struct ContentView : View {
 //            })
 //                .buttonStyle(.bordered)
 //                .padding()
-            if showingList{
-                
-            }else {
-                HStack{
-                    List(){
-                        
-                    }
-                }
-            }
+//            if showingList{
+//
+//            }else {
+//                HStack{
+//                    List(){
+//
+//                    }
+//                }
+//            }
             Button(action: {
                 addCup = true
             }, label: {
@@ -78,7 +78,7 @@ struct ARViewContainer: UIViewRepresentable {
         let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
         modelEntity.generateCollisionShapes(recursive: true)
         arViewModel.arView.installGestures([.translation],for: modelEntity)
-        let anchorEntity = AnchorEntity(plane: .horizontal,classification: .table)
+        let anchorEntity = AnchorEntity(plane:.horizontal,classification:.table)
         anchorEntity.addChild(modelEntity)
         arViewModel.arView.scene.addAnchor(anchorEntity)
 
@@ -88,7 +88,6 @@ struct ARViewContainer: UIViewRepresentable {
     }
     func placeCup(){
         print("add Cup")
-
         do{
             let cup = try Entity.load(named: "cup_saucer_set");
             let modelEntity = ModelEntity()

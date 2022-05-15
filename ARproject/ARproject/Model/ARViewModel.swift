@@ -64,15 +64,7 @@ extension ARView:ARCoachingOverlayViewDelegate{
     }
     
     func placeCup(at position:SIMD3<Float>){
-//        do{
-//            let cup = try ModelEntity.load(named: "cup_saucer_set");
-//            cup.generateCollisionShapes(recursive: true)
-//            self.installGestures([.translation],for: cup as! HasCollision)
-//            let tableAnchor = AnchorEntity(world: position)
-//            tableAnchor.addChild(cup)
-//            self.scene.addAnchor(tableAnchor)
-//        }catch{
-//        }
+
     }
     func addCoaching(){
         let coachingOverlay = ARCoachingOverlayView()
