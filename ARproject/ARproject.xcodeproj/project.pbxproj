@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		840B8EA828201E9600C631E2 /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B8EA728201E9600C631E2 /* ARViewModel.swift */; };
-		84205E9028314B85007B21BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84205E8F28314B85007B21BA /* ViewController.swift */; };
-		84205E9228314E0D007B21BA /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84205E9128314E0D007B21BA /* GameView.swift */; };
-		84205E9A28316518007B21BA /* book.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 84205E9928316518007B21BA /* book.rcproject */; };
+		8432B5622835076E0042D3B0 /* Book.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8432B5612835076E0042D3B0 /* Book.usdz */; };
+		8432B56428350B230042D3B0 /* TableArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B56328350B230042D3B0 /* TableArticleModel.swift */; };
 		8434F07F282EA3D600EC990C /* cup_saucer_set.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */; };
 		8439C69C281EC640009EB9A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69B281EC640009EB9A5 /* AppDelegate.swift */; };
 		8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69D281EC640009EB9A5 /* ContentView.swift */; };
@@ -21,9 +20,8 @@
 
 /* Begin PBXFileReference section */
 		840B8EA728201E9600C631E2 /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
-		84205E8F28314B85007B21BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84205E9128314E0D007B21BA /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		84205E9928316518007B21BA /* book.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = book.rcproject; sourceTree = "<group>"; };
+		8432B5612835076E0042D3B0 /* Book.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Book.usdz; sourceTree = "<group>"; };
+		8432B56328350B230042D3B0 /* TableArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableArticleModel.swift; sourceTree = "<group>"; };
 		8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = cup_saucer_set.usdz; path = ../../../../Downloads/cup_saucer_set.usdz; sourceTree = "<group>"; };
 		8439C698281EC640009EB9A5 /* ARproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8439C69B281EC640009EB9A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +67,7 @@
 				84B9C361282FE42D00BA01D9 /* View */,
 				84B9C360282FE42800BA01D9 /* App */,
 				8439C69F281EC640009EB9A5 /* Experience.rcproject */,
-				84205E9928316518007B21BA /* book.rcproject */,
+				8432B5612835076E0042D3B0 /* Book.usdz */,
 				8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */,
 				84AF6F53282AC50D0075D0B4 /* Assets.xcassets */,
 				8439C6A3281EC643009EB9A5 /* Preview Content */,
@@ -90,8 +88,6 @@
 			children = (
 				8439C69D281EC640009EB9A5 /* ContentView.swift */,
 				8439C69B281EC640009EB9A5 /* AppDelegate.swift */,
-				84205E8F28314B85007B21BA /* ViewController.swift */,
-				84205E9128314E0D007B21BA /* GameView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -107,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				840B8EA728201E9600C631E2 /* ARViewModel.swift */,
+				8432B56328350B230042D3B0 /* TableArticleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8432B5622835076E0042D3B0 /* Book.usdz in Resources */,
 				8434F07F282EA3D600EC990C /* cup_saucer_set.usdz in Resources */,
 				8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */,
 				84AF6F54282AC50D0075D0B4 /* Assets.xcassets in Resources */,
@@ -190,12 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84205E9028314B85007B21BA /* ViewController.swift in Sources */,
 				8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */,
-				84205E9A28316518007B21BA /* book.rcproject in Sources */,
 				8439C69C281EC640009EB9A5 /* AppDelegate.swift in Sources */,
+				8432B56428350B230042D3B0 /* TableArticleModel.swift in Sources */,
 				8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */,
-				84205E9228314E0D007B21BA /* GameView.swift in Sources */,
 				840B8EA828201E9600C631E2 /* ARViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
