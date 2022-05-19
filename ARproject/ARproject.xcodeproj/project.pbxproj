@@ -8,28 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		840B8EA828201E9600C631E2 /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B8EA728201E9600C631E2 /* ARViewModel.swift */; };
-		8432B5622835076E0042D3B0 /* Book.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8432B5612835076E0042D3B0 /* Book.usdz */; };
-		8432B56428350B230042D3B0 /* TableArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B56328350B230042D3B0 /* TableArticleModel.swift */; };
-		8434F07F282EA3D600EC990C /* cup_saucer_set.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */; };
+		8432B5622835076E0042D3B0 /* book.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8432B5612835076E0042D3B0 /* book.usdz */; };
+		8432B56428350B230042D3B0 /* TableArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B56328350B230042D3B0 /* TableArticle.swift */; };
+		8432B56928352CA10042D3B0 /* AddEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432B56828352CA10042D3B0 /* AddEntityList.swift */; };
 		8439C69C281EC640009EB9A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69B281EC640009EB9A5 /* AppDelegate.swift */; };
 		8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69D281EC640009EB9A5 /* ContentView.swift */; };
 		8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69F281EC640009EB9A5 /* Experience.rcproject */; };
 		8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */; };
+		846202DF283534A0007997A4 /* stapler.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202DE283534A0007997A4 /* stapler.usdz */; };
+		846202E1283534AA007997A4 /* envelope.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E0283534AA007997A4 /* envelope.usdz */; };
+		846202E3283535CA007997A4 /* box.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E2283535CA007997A4 /* box.usdz */; };
+		846202E5283537CE007997A4 /* apple.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E4283537CE007997A4 /* apple.usdz */; };
+		846202E7283539F4007997A4 /* pencil.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E6283539F4007997A4 /* pencil.usdz */; };
 		84AF6F54282AC50D0075D0B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AF6F53282AC50D0075D0B4 /* Assets.xcassets */; };
+		84F277712835405E005D0B74 /* TableArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F277702835405E005D0B74 /* TableArticleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		840B8EA728201E9600C631E2 /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
-		8432B5612835076E0042D3B0 /* Book.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Book.usdz; sourceTree = "<group>"; };
-		8432B56328350B230042D3B0 /* TableArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableArticleModel.swift; sourceTree = "<group>"; };
-		8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = cup_saucer_set.usdz; path = ../../../../Downloads/cup_saucer_set.usdz; sourceTree = "<group>"; };
+		8432B5612835076E0042D3B0 /* book.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = book.usdz; sourceTree = "<group>"; };
+		8432B56328350B230042D3B0 /* TableArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableArticle.swift; sourceTree = "<group>"; };
+		8432B56828352CA10042D3B0 /* AddEntityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntityList.swift; sourceTree = "<group>"; };
+		8432B56B28352CD20042D3B0 /* cup.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cup.usdz; sourceTree = "<group>"; };
 		8439C698281EC640009EB9A5 /* ARproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8439C69B281EC640009EB9A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8439C69D281EC640009EB9A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8439C69F281EC640009EB9A5 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		846202DE283534A0007997A4 /* stapler.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = stapler.usdz; sourceTree = "<group>"; };
+		846202E0283534AA007997A4 /* envelope.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = envelope.usdz; sourceTree = "<group>"; };
+		846202E2283535CA007997A4 /* box.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = box.usdz; sourceTree = "<group>"; };
+		846202E4283537CE007997A4 /* apple.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = apple.usdz; sourceTree = "<group>"; };
+		846202E6283539F4007997A4 /* pencil.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pencil.usdz; sourceTree = "<group>"; };
 		84AF6F53282AC50D0075D0B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		84B9C364282FE44800BA01D9 /* cup_saucer_set.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cup_saucer_set.usdz; sourceTree = "<group>"; };
+		84F277702835405E005D0B74 /* TableArticleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableArticleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8432B56A28352CC40042D3B0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8432B56B28352CD20042D3B0 /* cup.usdz */,
+				8432B5612835076E0042D3B0 /* book.usdz */,
+				846202DE283534A0007997A4 /* stapler.usdz */,
+				846202E0283534AA007997A4 /* envelope.usdz */,
+				846202E2283535CA007997A4 /* box.usdz */,
+				846202E4283537CE007997A4 /* apple.usdz */,
+				846202E6283539F4007997A4 /* pencil.usdz */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		8439C68F281EC640009EB9A5 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +88,12 @@
 		8439C69A281EC640009EB9A5 /* ARproject */ = {
 			isa = PBXGroup;
 			children = (
+				8432B56A28352CC40042D3B0 /* Resource */,
 				84B9C363282FE44000BA01D9 /* Data */,
 				84B9C362282FE43700BA01D9 /* Model */,
 				84B9C361282FE42D00BA01D9 /* View */,
 				84B9C360282FE42800BA01D9 /* App */,
 				8439C69F281EC640009EB9A5 /* Experience.rcproject */,
-				8432B5612835076E0042D3B0 /* Book.usdz */,
-				8434F07E282EA3D600EC990C /* cup_saucer_set.usdz */,
 				84AF6F53282AC50D0075D0B4 /* Assets.xcassets */,
 				8439C6A3281EC643009EB9A5 /* Preview Content */,
 			);
@@ -95,6 +120,7 @@
 		84B9C361282FE42D00BA01D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8432B56828352CA10042D3B0 /* AddEntityList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				840B8EA728201E9600C631E2 /* ARViewModel.swift */,
-				8432B56328350B230042D3B0 /* TableArticleModel.swift */,
+				8432B56328350B230042D3B0 /* TableArticle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,7 +137,7 @@
 		84B9C363282FE44000BA01D9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				84B9C364282FE44800BA01D9 /* cup_saucer_set.usdz */,
+				84F277702835405E005D0B74 /* TableArticleData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -174,10 +200,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8432B5622835076E0042D3B0 /* Book.usdz in Resources */,
-				8434F07F282EA3D600EC990C /* cup_saucer_set.usdz in Resources */,
+				8432B5622835076E0042D3B0 /* book.usdz in Resources */,
+				846202E1283534AA007997A4 /* envelope.usdz in Resources */,
+				846202E7283539F4007997A4 /* pencil.usdz in Resources */,
 				8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */,
 				84AF6F54282AC50D0075D0B4 /* Assets.xcassets in Resources */,
+				846202DF283534A0007997A4 /* stapler.usdz in Resources */,
+				846202E5283537CE007997A4 /* apple.usdz in Resources */,
+				846202E3283535CA007997A4 /* box.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,9 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8432B56928352CA10042D3B0 /* AddEntityList.swift in Sources */,
+				84F277712835405E005D0B74 /* TableArticleData.swift in Sources */,
 				8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */,
 				8439C69C281EC640009EB9A5 /* AppDelegate.swift in Sources */,
-				8432B56428350B230042D3B0 /* TableArticleModel.swift in Sources */,
+				8432B56428350B230042D3B0 /* TableArticle.swift in Sources */,
 				8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */,
 				840B8EA828201E9600C631E2 /* ARViewModel.swift in Sources */,
 			);
@@ -324,6 +356,8 @@
 				DEVELOPMENT_TEAM = RCZUH744DX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARproject/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -355,6 +389,8 @@
 				DEVELOPMENT_TEAM = RCZUH744DX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARproject/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

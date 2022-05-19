@@ -21,23 +21,21 @@ struct ContentView : View {
                 
             })
             
-//            if showingList{
-//
-//            }else {
-//                HStack{
-//                    List(){
-//
-//                    }
-//                }
-//            }
-            Button(action: {
-                addEntity = true
-                EntityName = "Book"
-            }, label: {
-                Text("放置一本书")
-            })
-                .buttonStyle(.bordered)
-                .padding()
+            if showingList{
+                AddEntityList(addEntity: $addEntity, EntityName: $EntityName)
+            }else {
+                Button(action: {
+                    showingList = true
+                }, label: {
+                    Image(systemName: "chevron.left.2")
+                        .clipShape(Circle())
+                        .opacity(0.5)
+                        .frame(width: 1, height: 1)
+                })
+            }
+
+
+
 
         }
         .environmentObject(arViewModel)
