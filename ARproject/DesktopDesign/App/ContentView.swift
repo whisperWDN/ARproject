@@ -14,11 +14,10 @@ struct ContentView : View {
     @State var addEntity = false
     @State var add3DWord = false
     @State var EntityName = ""
-    @State var intensity = CGFloat(0.0)
     @State var showingList = false
     var body: some View {
         ZStack(alignment: .bottom){
-            ARViewContainer(addEntity: $addEntity, EntityName:$EntityName,add3DWord:$add3DWord, intensity: $intensity).gesture(TapGesture().onEnded(){
+            ARViewContainer(addEntity: $addEntity, EntityName:$EntityName,add3DWord:$add3DWord).gesture(TapGesture().onEnded(){
                 
             })
             
@@ -50,6 +49,18 @@ struct ContentView : View {
                         .opacity(0.5)
                 })
                 
+//                Button(action: {
+//                    arViewModel.arView.setupForARImageConfiguration()
+//                }, label: {
+//                    Image(systemName: "circle.square")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 75, height: 75, alignment: .center)
+//                        .foregroundColor(.white)
+//                        .opacity(0.5)
+//                })
+                
+                
 
             }
 
@@ -67,7 +78,6 @@ struct ARViewContainer: UIViewRepresentable {
     @Binding var addEntity: Bool
     @Binding var EntityName: String
     @Binding var add3DWord :Bool
-    @Binding var intensity: CGFloat
     
     
     func makeUIView(context: Context) -> ARView {
@@ -83,7 +93,7 @@ struct ARViewContainer: UIViewRepresentable {
                 entity.generateCollisionShapes(recursive: true)
                 arViewModel.arView.installGestures([.translation],for:modelEntity)
                 modelEntity.addChild(entity)
-                let anchorEntity = AnchorEntity()
+                let anchorEntity = AnchorEntity(plane: .horizontal, classification: .table)
                 anchorEntity.addChild(modelEntity)
                 arViewModel.arView.scene.addAnchor(anchorEntity)
             }catch{
@@ -130,9 +140,7 @@ struct ARViewContainer: UIViewRepresentable {
         }
 
         func session(_ session: ARSession, didUpdate frame: ARFrame) {
-            if let intensity = frame.lightEstimate?.ambientIntensity{
-                parent.intensity = intensity
-            }
+
 
         }
 

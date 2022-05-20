@@ -15,6 +15,7 @@
 		8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69D281EC640009EB9A5 /* ContentView.swift */; };
 		8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69F281EC640009EB9A5 /* Experience.rcproject */; };
 		8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */; };
+		8441E9AA2837ED0300E8287F /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441E9A92837ED0300E8287F /* info.plist */; };
 		846202DF283534A0007997A4 /* stapler.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202DE283534A0007997A4 /* stapler.usdz */; };
 		846202E1283534AA007997A4 /* envelope.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E0283534AA007997A4 /* envelope.usdz */; };
 		846202E3283535CA007997A4 /* box.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E2283535CA007997A4 /* box.usdz */; };
@@ -30,11 +31,12 @@
 		8432B56328350B230042D3B0 /* TableArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableArticle.swift; sourceTree = "<group>"; };
 		8432B56828352CA10042D3B0 /* AddEntityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntityList.swift; sourceTree = "<group>"; };
 		8432B56B28352CD20042D3B0 /* cup.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = cup.usdz; sourceTree = "<group>"; };
-		8439C698281EC640009EB9A5 /* ARproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8439C698281EC640009EB9A5 /* DesktopDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8439C69B281EC640009EB9A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8439C69D281EC640009EB9A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8439C69F281EC640009EB9A5 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8441E9A92837ED0300E8287F /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		846202DE283534A0007997A4 /* stapler.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = stapler.usdz; sourceTree = "<group>"; };
 		846202E0283534AA007997A4 /* envelope.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = envelope.usdz; sourceTree = "<group>"; };
 		846202E2283535CA007997A4 /* box.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = box.usdz; sourceTree = "<group>"; };
@@ -72,7 +74,8 @@
 		8439C68F281EC640009EB9A5 = {
 			isa = PBXGroup;
 			children = (
-				8439C69A281EC640009EB9A5 /* ARproject */,
+				8441E9AB2837ED1600E8287F /* ARproject */,
+				8439C69A281EC640009EB9A5 /* DesktopDesign */,
 				8439C699281EC640009EB9A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,14 +83,15 @@
 		8439C699281EC640009EB9A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8439C698281EC640009EB9A5 /* ARproject.app */,
+				8439C698281EC640009EB9A5 /* DesktopDesign.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8439C69A281EC640009EB9A5 /* ARproject */ = {
+		8439C69A281EC640009EB9A5 /* DesktopDesign */ = {
 			isa = PBXGroup;
 			children = (
+				8441E9A92837ED0300E8287F /* info.plist */,
 				8432B56A28352CC40042D3B0 /* Resource */,
 				84B9C363282FE44000BA01D9 /* Data */,
 				84B9C362282FE43700BA01D9 /* Model */,
@@ -97,7 +101,7 @@
 				84AF6F53282AC50D0075D0B4 /* Assets.xcassets */,
 				8439C6A3281EC643009EB9A5 /* Preview Content */,
 			);
-			path = ARproject;
+			path = DesktopDesign;
 			sourceTree = "<group>";
 		};
 		8439C6A3281EC643009EB9A5 /* Preview Content */ = {
@@ -106,6 +110,13 @@
 				8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8441E9AB2837ED1600E8287F /* ARproject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ARproject;
 			sourceTree = "<group>";
 		};
 		84B9C360282FE42800BA01D9 /* App */ = {
@@ -145,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8439C697281EC640009EB9A5 /* ARproject */ = {
+		8439C697281EC640009EB9A5 /* DesktopDesign */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8439C6A8281EC643009EB9A5 /* Build configuration list for PBXNativeTarget "ARproject" */;
+			buildConfigurationList = 8439C6A8281EC643009EB9A5 /* Build configuration list for PBXNativeTarget "DesktopDesign" */;
 			buildPhases = (
 				8439C694281EC640009EB9A5 /* Sources */,
 				8439C695281EC640009EB9A5 /* Frameworks */,
@@ -157,9 +168,9 @@
 			);
 			dependencies = (
 			);
-			name = ARproject;
+			name = DesktopDesign;
 			productName = ARproject;
-			productReference = 8439C698281EC640009EB9A5 /* ARproject.app */;
+			productReference = 8439C698281EC640009EB9A5 /* DesktopDesign.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8439C693281EC640009EB9A5 /* Build configuration list for PBXProject "ARproject" */;
+			buildConfigurationList = 8439C693281EC640009EB9A5 /* Build configuration list for PBXProject "DesktopDesign" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -190,7 +201,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8439C697281EC640009EB9A5 /* ARproject */,
+				8439C697281EC640009EB9A5 /* DesktopDesign */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +213,7 @@
 			files = (
 				8432B5622835076E0042D3B0 /* book.usdz in Resources */,
 				846202E1283534AA007997A4 /* envelope.usdz in Resources */,
+				8441E9AA2837ED0300E8287F /* info.plist in Resources */,
 				846202E7283539F4007997A4 /* pencil.usdz in Resources */,
 				8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */,
 				84AF6F54282AC50D0075D0B4 /* Assets.xcassets in Resources */,
@@ -352,7 +364,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ARproject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DesktopDesign/Preview Content\"";
 				DEVELOPMENT_TEAM = RCZUH744DX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -360,7 +372,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -385,7 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ARproject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DesktopDesign/Preview Content\"";
 				DEVELOPMENT_TEAM = RCZUH744DX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -393,7 +404,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -414,7 +424,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8439C693281EC640009EB9A5 /* Build configuration list for PBXProject "ARproject" */ = {
+		8439C693281EC640009EB9A5 /* Build configuration list for PBXProject "DesktopDesign" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8439C6A6281EC643009EB9A5 /* Debug */,
@@ -423,7 +433,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8439C6A8281EC643009EB9A5 /* Build configuration list for PBXNativeTarget "ARproject" */ = {
+		8439C6A8281EC643009EB9A5 /* Build configuration list for PBXNativeTarget "DesktopDesign" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8439C6A9281EC643009EB9A5 /* Debug */,

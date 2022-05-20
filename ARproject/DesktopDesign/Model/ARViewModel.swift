@@ -42,34 +42,17 @@ extension ARView:ARCoachingOverlayViewDelegate{
 
     
     }
-//    func enableTapGesture(){
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
-//
-//        self.addGestureRecognizer(tapGestureRecognizer)
-//    }
-//    @objc func handleTap(recognizer:UITapGestureRecognizer){
-//        let tapLocation = recognizer.location(in: self)
-//        let results = self.raycast(from: tapLocation, allowing: .estimatedPlane, alignment: .any)
-//        if let firstRusult = results.first{
-//            let position = simd_make_float3(firstRusult.worldTransform.columns.3)
-//            placeCube(at:position)
-//        }
-//
-//    }
-//    func placeCube(at position:SIMD3<Float>){
-//        let mesh = MeshResource.generateBox(size: 0.1)
-//        let material = SimpleMaterial(color: .white, isMetallic: false)
-//        let modelEntity = ModelEntity(mesh: mesh,materials: [material])
-//        modelEntity.generateCollisionShapes(recursive: true)
-//        self.installGestures([.translation],for: modelEntity)
-//        let anchorEntity = AnchorEntity(world:position)
-//        anchorEntity.addChild(modelEntity)
-//        self.scene.addAnchor(anchorEntity)
-//    }
-//
-//    func placeCup(at position:SIMD3<Float>){
-//
-//    }
+    
+    func setupForARImageConfiguration(){
+        let config = ARImageTrackingConfiguration()
+        guard let trackedImagesLib = ARReferenceImage.referenceImages(inGroupNamed: "ReferenceImageLibrary", bundle: Bundle.main) else {
+            fatalError("无法加载参考图像库")
+        }
+        config.trackingImages = trackedImagesLib
+        config.maximumNumberOfTrackedImages = 1
+        self.session.run(config,options: [])
+    }
+
     func addCoaching(){
         let coachingOverlay = ARCoachingOverlayView()
         coachingOverlay.delegate = self
@@ -83,6 +66,7 @@ extension ARView:ARCoachingOverlayViewDelegate{
 }
 
 extension ARView:ARSessionDelegate{
+    
     public func session(_ session: ARSession, didFailWithError error: Error) {
         guard let arError = error as? ARError else{return}
         let isRecoverable = (arError.code == .worldTrackingFailed)
@@ -93,4 +77,23 @@ extension ARView:ARSessionDelegate{
             print("错误不可恢复，失败code=\(arError.code),错误描述：\(arError.localizedDescription)")
         }
     }
+    
+    public func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+        guard let imageAnchor = anchors[0]as?ARImageAnchor else{
+            return
+        }
+        let referenceImageName = imageAnchor.referenceImage.name ?? "book"
+        DispatchQueue.main.async {
+            do{
+                let myModelEntity = try Entity.load(named: referenceImageName)
+                let imageAnchorEntity = AnchorEntity(anchor: imageAnchor)
+                imageAnchorEntity.addChild(myModelEntity)
+                self.scene.addAnchor(imageAnchorEntity)
+            }catch{
+                print("无法加载模型")
+            }
+        }
+    }
+    
+
 }
