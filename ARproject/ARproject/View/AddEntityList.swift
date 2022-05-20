@@ -10,9 +10,10 @@ import SwiftUI
 struct AddEntityList: View {
     @Binding var addEntity: Bool
     @Binding var EntityName: String
+    @Binding var showingList :Bool
     let tableArticles: [TableArticle] = tableArticleData
     var body: some View {
-        HStack{
+        HStack(spacing:15){
             ForEach(tableArticles){
                 item in
                 Button(action: {
@@ -20,17 +21,25 @@ struct AddEntityList: View {
                     EntityName = item.name
                 }, label: {
                     Image(item.name)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100, alignment: .center)
                         .clipShape(Circle())
                         .opacity(0.5)
-                        .frame(width: 1, height: 1)
                 })
             }
-        }
-    }
-}
+            
+            Button(action: {
+                showingList = false
+            }, label: {
+                Image(systemName: "chevron.left.2")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 75, height: 75, alignment: .center)
+                    .clipShape(Circle())
+                    .opacity(0.5)
+            })
 
-struct AddEntityList_Previews: PreviewProvider {
-    static var previews: some View {
-        AddEntityList(addEntity: , EntityName: )
+        }
     }
 }

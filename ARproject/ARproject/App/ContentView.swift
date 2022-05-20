@@ -22,15 +22,17 @@ struct ContentView : View {
             })
             
             if showingList{
-                AddEntityList(addEntity: $addEntity, EntityName: $EntityName)
+                AddEntityList(addEntity: $addEntity, EntityName: $EntityName,showingList:$showingList)
             }else {
                 Button(action: {
                     showingList = true
                 }, label: {
-                    Image(systemName: "chevron.left.2")
+                    Image(systemName: "chevron.right.2")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 75, height: 75, alignment: .center)
                         .clipShape(Circle())
                         .opacity(0.5)
-                        .frame(width: 1, height: 1)
                 })
             }
 
@@ -62,7 +64,7 @@ struct ARViewContainer: UIViewRepresentable {
                 entity.generateCollisionShapes(recursive: true)
                 arViewModel.arView.installGestures([.translation],for:modelEntity)
                 modelEntity.addChild(entity)
-                let anchorEntity = AnchorEntity(plane:.horizontal,classification: .table)
+                let anchorEntity = AnchorEntity()
                 anchorEntity.addChild(modelEntity)
                 arViewModel.arView.scene.addAnchor(anchorEntity)
             }catch{
@@ -71,7 +73,7 @@ struct ARViewContainer: UIViewRepresentable {
                 let modelEntity = ModelEntity(mesh: boxMesh, materials: [material])
                 modelEntity.generateCollisionShapes(recursive: true)
                 arViewModel.arView.installGestures([.translation],for: modelEntity)
-                let anchorEntity = AnchorEntity(plane:.horizontal,classification: .table)
+                let anchorEntity = AnchorEntity()
                 anchorEntity.addChild(modelEntity)
                 arViewModel.arView.scene.addAnchor(anchorEntity)
             }
