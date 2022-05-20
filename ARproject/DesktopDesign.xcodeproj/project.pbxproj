@@ -15,7 +15,6 @@
 		8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69D281EC640009EB9A5 /* ContentView.swift */; };
 		8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69F281EC640009EB9A5 /* Experience.rcproject */; };
 		8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */; };
-		8441E9AA2837ED0300E8287F /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8441E9A92837ED0300E8287F /* info.plist */; };
 		846202DF283534A0007997A4 /* stapler.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202DE283534A0007997A4 /* stapler.usdz */; };
 		846202E1283534AA007997A4 /* envelope.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E0283534AA007997A4 /* envelope.usdz */; };
 		846202E3283535CA007997A4 /* box.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E2283535CA007997A4 /* box.usdz */; };
@@ -36,7 +35,6 @@
 		8439C69D281EC640009EB9A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8439C69F281EC640009EB9A5 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8441E9A92837ED0300E8287F /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		846202DE283534A0007997A4 /* stapler.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = stapler.usdz; sourceTree = "<group>"; };
 		846202E0283534AA007997A4 /* envelope.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = envelope.usdz; sourceTree = "<group>"; };
 		846202E2283535CA007997A4 /* box.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = box.usdz; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 		8439C68F281EC640009EB9A5 = {
 			isa = PBXGroup;
 			children = (
-				8441E9AB2837ED1600E8287F /* ARproject */,
 				8439C69A281EC640009EB9A5 /* DesktopDesign */,
 				8439C699281EC640009EB9A5 /* Products */,
 			);
@@ -91,7 +88,6 @@
 		8439C69A281EC640009EB9A5 /* DesktopDesign */ = {
 			isa = PBXGroup;
 			children = (
-				8441E9A92837ED0300E8287F /* info.plist */,
 				8432B56A28352CC40042D3B0 /* Resource */,
 				84B9C363282FE44000BA01D9 /* Data */,
 				84B9C362282FE43700BA01D9 /* Model */,
@@ -110,13 +106,6 @@
 				8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		8441E9AB2837ED1600E8287F /* ARproject */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ARproject;
 			sourceTree = "<group>";
 		};
 		84B9C360282FE42800BA01D9 /* App */ = {
@@ -213,7 +202,6 @@
 			files = (
 				8432B5622835076E0042D3B0 /* book.usdz in Resources */,
 				846202E1283534AA007997A4 /* envelope.usdz in Resources */,
-				8441E9AA2837ED0300E8287F /* info.plist in Resources */,
 				846202E7283539F4007997A4 /* pencil.usdz in Resources */,
 				8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */,
 				84AF6F54282AC50D0075D0B4 /* Assets.xcassets in Resources */,
@@ -368,10 +356,11 @@
 				DEVELOPMENT_TEAM = RCZUH744DX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ARproject/Info.plist;
+				INFOPLIST_FILE = DesktopDesign/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -400,10 +389,11 @@
 				DEVELOPMENT_TEAM = RCZUH744DX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ARproject/Info.plist;
+				INFOPLIST_FILE = DesktopDesign/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
