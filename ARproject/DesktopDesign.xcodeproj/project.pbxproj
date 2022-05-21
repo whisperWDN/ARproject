@@ -15,6 +15,8 @@
 		8439C69E281EC640009EB9A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69D281EC640009EB9A5 /* ContentView.swift */; };
 		8439C6A0281EC640009EB9A5 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8439C69F281EC640009EB9A5 /* Experience.rcproject */; };
 		8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */; };
+		843C4D4C2838D3BD00049045 /* fox.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843C4D4B2838D3BD00049045 /* fox.mp3 */; };
+		843C4D542838D9CF00049045 /* audio.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 843C4D532838D9CF00049045 /* audio.usdz */; };
 		846202DF283534A0007997A4 /* stapler.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202DE283534A0007997A4 /* stapler.usdz */; };
 		846202E1283534AA007997A4 /* envelope.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E0283534AA007997A4 /* envelope.usdz */; };
 		846202E3283535CA007997A4 /* box.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 846202E2283535CA007997A4 /* box.usdz */; };
@@ -35,6 +37,8 @@
 		8439C69D281EC640009EB9A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8439C69F281EC640009EB9A5 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		8439C6A4281EC643009EB9A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		843C4D4B2838D3BD00049045 /* fox.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fox.mp3; sourceTree = "<group>"; };
+		843C4D532838D9CF00049045 /* audio.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = audio.usdz; sourceTree = "<group>"; };
 		846202DE283534A0007997A4 /* stapler.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = stapler.usdz; sourceTree = "<group>"; };
 		846202E0283534AA007997A4 /* envelope.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = envelope.usdz; sourceTree = "<group>"; };
 		846202E2283535CA007997A4 /* box.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = box.usdz; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 				846202E2283535CA007997A4 /* box.usdz */,
 				846202E4283537CE007997A4 /* apple.usdz */,
 				846202E6283539F4007997A4 /* pencil.usdz */,
+				843C4D532838D9CF00049045 /* audio.usdz */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 				84B9C360282FE42800BA01D9 /* App */,
 				8439C69F281EC640009EB9A5 /* Experience.rcproject */,
 				84AF6F53282AC50D0075D0B4 /* Assets.xcassets */,
+				843C4D4B2838D3BD00049045 /* fox.mp3 */,
 				8439C6A3281EC643009EB9A5 /* Preview Content */,
 			);
 			path = DesktopDesign;
@@ -202,10 +208,12 @@
 			files = (
 				8432B5622835076E0042D3B0 /* book.usdz in Resources */,
 				846202E1283534AA007997A4 /* envelope.usdz in Resources */,
+				843C4D542838D9CF00049045 /* audio.usdz in Resources */,
 				846202E7283539F4007997A4 /* pencil.usdz in Resources */,
 				8439C6A5281EC643009EB9A5 /* Preview Assets.xcassets in Resources */,
 				84AF6F54282AC50D0075D0B4 /* Assets.xcassets in Resources */,
 				846202DF283534A0007997A4 /* stapler.usdz in Resources */,
+				843C4D4C2838D3BD00049045 /* fox.mp3 in Resources */,
 				846202E5283537CE007997A4 /* apple.usdz in Resources */,
 				846202E3283535CA007997A4 /* box.usdz in Resources */,
 			);

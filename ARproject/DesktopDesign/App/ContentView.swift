@@ -14,10 +14,11 @@ struct ContentView : View {
     @State var addEntity = false
     @State var add3DWord = false
     @State var EntityName = ""
+    @State var addAudio = false
     @State var showingList = false
     var body: some View {
         ZStack(alignment: .bottom){
-            ARViewContainer(addEntity: $addEntity, EntityName:$EntityName,add3DWord:$add3DWord).gesture(TapGesture().onEnded(){
+            ARViewContainer(addEntity: $addEntity, EntityName:$EntityName,add3DWord:$add3DWord,addAudio:$addAudio).gesture(TapGesture().onEnded(){
                 
             })
             
@@ -49,16 +50,16 @@ struct ContentView : View {
                         .opacity(0.5)
                 })
                 
-//                Button(action: {
-//                    arViewModel.arView.setupForARImageConfiguration()
-//                }, label: {
-//                    Image(systemName: "circle.square")
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 75, height: 75, alignment: .center)
-//                        .foregroundColor(.white)
-//                        .opacity(0.5)
-//                })
+                Button(action: {
+                    addAudio = true
+                }, label: {
+                    Image(systemName: "play.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 75, height: 75, alignment: .center)
+                        .foregroundColor(.white)
+                        .opacity(0.5)
+                })
                 
                 
 
@@ -78,7 +79,7 @@ struct ARViewContainer: UIViewRepresentable {
     @Binding var addEntity: Bool
     @Binding var EntityName: String
     @Binding var add3DWord :Bool
-    
+    @Binding var addAudio:Bool
     
     func makeUIView(context: Context) -> ARView {
 //        arViewModel.arView.enableTapGesture()
@@ -113,15 +114,46 @@ struct ARViewContainer: UIViewRepresentable {
         }
         
         if add3DWord{
+
             let anchorEntity = AnchorEntity(plane: .horizontal)
             let textMesh = MeshResource.generateText("桌面设计",extrusionDepth: 0.05,font: .systemFont(ofSize: 0.2),containerFrame: CGRect(),alignment: .left,lineBreakMode: .byWordWrapping)
             let material = SimpleMaterial(color: .red, isMetallic: true)
             let textEntity = ModelEntity(mesh: textMesh, materials: [material])
+
             textEntity.generateCollisionShapes(recursive: false)
             arViewModel.arView.installGestures([.translation],for: textEntity)
             
             anchorEntity.addChild(textEntity)
             arViewModel.arView.scene.addAnchor(anchorEntity)
+
+            DispatchQueue.main.async {
+                add3DWord = false
+            }
+
+
+        }
+        if addAudio{
+            do{
+                let anchorEntity = AnchorEntity(plane: .horizontal)
+                let audio = try AudioFileResource.load(named: "fox.mp3",in:nil,inputMode: .spatial,loadingStrategy: .preload,shouldLoop: false)
+                let AudioEntity = try ModelEntity.load(named:"audio");
+                let audioController = AudioEntity.prepareAudio(audio)
+                audioController.play()
+                let modelEntity = ModelEntity()
+                AudioEntity.generateCollisionShapes(recursive: false)
+                modelEntity.addChild(AudioEntity)
+                arViewModel.arView.installGestures([.translation],for: modelEntity)
+                anchorEntity.addChild(modelEntity)
+                arViewModel.arView.scene.addAnchor(anchorEntity)
+//                audioEvent = arViewModel.arView.scene.subscribe(to: AudioEvents){
+//                    event in print("音频播放完毕")
+//                }
+            }catch{
+                print("音频加载出错")
+            }
+            DispatchQueue.main.async {
+                addAudio = false
+            }
         }
 
         

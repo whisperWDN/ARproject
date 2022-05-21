@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "stapler.jpg",
+      "filename" : "stapler.png",
       "idiom" : "universal"
     }
   ],
@@ -10,6 +10,6 @@
     "version" : 1
   },
   "properties" : {
-    "width" : 0
+    "width" : 0.10000000000000001
   }
 }

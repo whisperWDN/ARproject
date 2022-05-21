@@ -5,24 +5,6 @@
   },
   "resources" : [
     {
-      "filename" : "apple.arreferenceimage"
-    },
-    {
-      "filename" : "book.arreferenceimage"
-    },
-    {
-      "filename" : "box.arreferenceimage"
-    },
-    {
-      "filename" : "cup.arreferenceimage"
-    },
-    {
-      "filename" : "envelope.arreferenceimage"
-    },
-    {
-      "filename" : "pencil.arreferenceimage"
-    },
-    {
       "filename" : "stapler.arreferenceimage"
     }
   ]

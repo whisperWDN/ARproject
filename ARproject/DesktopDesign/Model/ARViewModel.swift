@@ -86,7 +86,7 @@ extension ARView:ARSessionDelegate{
         DispatchQueue.main.async {
             do{
                 let myModelEntity = try Entity.load(named: referenceImageName)
-                let imageAnchorEntity = AnchorEntity(anchor: imageAnchor)
+                let imageAnchorEntity = AnchorEntity()
                 imageAnchorEntity.addChild(myModelEntity)
                 self.scene.addAnchor(imageAnchorEntity)
             }catch{
